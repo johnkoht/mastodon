@@ -6590,3 +6590,20 @@ noscript {
     }
   }
 }
+
+.button-donate {
+  background-color: transparent;
+  border: 1px solid $ui-highlight-color;
+  border-radius: 4px;
+  color: $ui-highlight-color !important;
+  padding: 0px 7px;
+  font-size: 13px;
+  height: 28px;
+  line-height: 28px;
+  margin-right: 18px;
+
+  &:hover {
+    background-color: $ui-highlight-color;
+    color: white !important;
+  }
+}

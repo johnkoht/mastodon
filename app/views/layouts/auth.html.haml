@@ -4,9 +4,10 @@
 - content_for :content do
   .container-alt
     .logo-container
-      %h1
-        = link_to root_path do
-          = svg_logo_full
+      %h1{style: "font-size: 25px;"} Money.social
+      / %h1
+      /   = link_to root_path do
+      /     = svg_logo_full
 
     .form-container
       = render 'flashes'

@@ -1,4 +1,4 @@
-web: env PORT=3000 bundle exec puma -C config/puma.rb
+web: rails s -b 'ssl://localhost:3000?key=./localhost.key&cert=./localhost.crt'
 sidekiq: env PORT=3000 bundle exec sidekiq
 stream: env PORT=4000 yarn run start
 webpack: ./bin/webpack-dev-server --listen-host 0.0.0.0
