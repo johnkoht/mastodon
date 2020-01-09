@@ -27,6 +27,7 @@ import {
 } from '../../ui/util/async-components';
 import Icon from 'mastodon/components/icon';
 import ComposePanel from './compose_panel';
+import ComposeFormContainer from 'mastodon/features/compose/containers/compose_form_container';
 import NavigationPanel from './navigation_panel';
 
 import detectPassiveEvents from 'detect-passive-events';
@@ -193,20 +194,21 @@ class ColumnsArea extends ImmutablePureComponent {
 
       return (
         <div className='columns-area__panels'>
-          <div className='columns-area__panels__pane columns-area__panels__pane--compositional'>
+          <div className='columns-area__panels__pane columns-area__panels__pane--start columns-area__panels__pane--navigational'>
             <div className='columns-area__panels__pane__inner'>
-              <ComposePanel />
+              <NavigationPanel />
             </div>
           </div>
 
           <div className='columns-area__panels__main'>
+            <ComposeFormContainer singleColumn />
             <TabsBar key='tabs' />
             {content}
           </div>
 
-          <div className='columns-area__panels__pane columns-area__panels__pane--start columns-area__panels__pane--navigational'>
+          <div className='columns-area__panels__pane columns-area__panels__pane--compositional'>
             <div className='columns-area__panels__pane__inner'>
-              <NavigationPanel />
+              <ComposePanel />
             </div>
           </div>
 

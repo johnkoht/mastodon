@@ -7,9 +7,11 @@ import LinkFooter from './link_footer';
 const ComposePanel = () => (
   <div className='compose-panel'>
     <SearchContainer openInRoute />
+    {/*
     <NavigationContainer />
     <ComposeFormContainer singleColumn />
     <LinkFooter withHotkeys />
+    */}
   </div>
 );
 

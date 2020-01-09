@@ -1115,8 +1115,9 @@
   }
 }
 
-.status__action-bar-button {
-  margin-right: 18px;
+.status__action-bar-button,
+.status__action-bar__counter {
+  margin-right: 60px;
 }
 
 .status__action-bar-dropdown {
@@ -1584,12 +1585,12 @@ a.account__display-name {
   position: absolute;
 
   .star-icon {
-    color: $gold-star;
+    color: $twitter-red;
   }
 }
 
 .star-icon.active {
-  color: $gold-star;
+  color: $twitter-red;
 }
 
 .bookmark-icon.active {

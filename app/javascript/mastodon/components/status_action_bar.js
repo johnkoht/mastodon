@@ -319,6 +319,12 @@ class StatusActionBar extends ImmutablePureComponent {
       replyTitle = intl.formatMessage(messages.replyAll);
     }
 
+    let sm_menu = [];
+
+    sm_menu.push({ text: "Send via Cash App", action: this.handleOpen });
+    sm_menu.push({ text: "Send via Venmo", action: this.handleOpen });
+    sm_menu.push({ text: "Send via Paypal", action: this.handleOpen });
+
     const shareButton = ('share' in navigator) && status.get('visibility') === 'public' && (
       <IconButton className='status__action-bar-button' title={intl.formatMessage(messages.share)} icon='share-alt' onClick={this.handleShareClick} />
     );
@@ -330,11 +336,17 @@ class StatusActionBar extends ImmutablePureComponent {
         <IconButton className='status__action-bar-button star-icon' animate active={status.get('favourited')} pressed={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='star' onClick={this.handleFavouriteClick} />
         {shareButton}
 
-        <a class="button button-donate" href="https://cash.app/$johnkoht" target="_blank">Donate Money</a>
+        {/*<a class="button button-donate" href="https://cash.app/$johnkoht" target="_blank">Donate Money</a>*/}
 
+        <div className='status__action-bar-dropdown'>
+          <DropdownMenuContainer disabled={anonymousAccess} status={status} items={sm_menu} icon="usd" title="Send Money" size={18} direction='right' title={intl.formatMessage(messages.more)} />
+        </div>
+
+        {/*
         <div className='status__action-bar-dropdown'>
           <DropdownMenuContainer disabled={anonymousAccess} status={status} items={menu} icon='ellipsis-h' size={18} direction='right' title={intl.formatMessage(messages.more)} />
         </div>
+        */}
       </div>
     );
   }
