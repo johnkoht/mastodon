@@ -14,7 +14,7 @@ const NavigationPanel = () => (
 
     <NavLink className='column-link column-link--transparent' to='/notifications' data-preview-title-id='column.get_money' data-preview-icon='dollar-sign' ><Icon className='column-link__icon' id='usd' fixedWidth /><FormattedMessage id='tabs_bar.get_money' defaultMessage='Get Money' /></NavLink>
 
-    <NavLink className='column-link column-link--transparent' to='/timeline/public/local' data-preview-title-id='column.build_brand' data-preview-icon='retweet' ><Icon className='column-link__icon' id='retweet' fixedWidth /><FormattedMessage id='tabs_bar.build_brand' defaultMessage='Build My Brand' /></NavLink>
+    <NavLink className='column-link column-link--transparent' to='/timeline/public/local' data-preview-title-id='column.build_brand' data-preview-icon='retweet' ><Icon className='column-link__icon' id='retweet' fixedWidth /><FormattedMessage id='tabs_bar.build_brand' defaultMessage='Post Publicly' /></NavLink>
 
     {/*
     <NavLink className='column-link column-link--transparent' to='/notifications' data-preview-title-id='column.notifications' data-preview-icon='bell' ><NotificationsCounterIcon className='column-link__icon' /><FormattedMessage id='tabs_bar.notifications' defaultMessage='Notifications' /></NavLink>
@@ -23,7 +23,7 @@ const NavigationPanel = () => (
     <NavLink className='column-link column-link--transparent' exact to='/timelines/public' data-preview-title-id='column.public' data-preview-icon='globe' ><Icon className='column-link__icon' id='globe' fixedWidth /><FormattedMessage id='tabs_bar.federated_timeline' defaultMessage='Federated' /></NavLink>
     */}
 
-    <NavLink className='column-link column-link--transparent' to='/timelines/direct'><Icon className='column-link__icon' id='envelope' fixedWidth /><FormattedMessage id='navigation_bar.direct' defaultMessage='Encrypted Chat' /></NavLink>
+    <NavLink className='column-link column-link--transparent' to='/timelines/direct'><Icon className='column-link__icon' id='envelope' fixedWidth /><FormattedMessage id='navigation_bar.encrypted' defaultMessage='Encrypted Messages' /></NavLink>
     {/*
     <NavLink className='column-link column-link--transparent' to='/favourites'><Icon className='column-link__icon' id='star' fixedWidth /><FormattedMessage id='navigation_bar.favourites' defaultMessage='Favourites' /></NavLink>
     <NavLink className='column-link column-link--transparent' to='/bookmarks'><Icon className='column-link__icon' id='bookmark' fixedWidth /><FormattedMessage id='navigation_bar.bookmarks' defaultMessage='Bookmarks' /></NavLink>

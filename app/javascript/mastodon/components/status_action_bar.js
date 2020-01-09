@@ -321,9 +321,9 @@ class StatusActionBar extends ImmutablePureComponent {
 
     let sm_menu = [];
 
-    sm_menu.push({ text: "Send via Cash App", action: this.handleOpen });
-    sm_menu.push({ text: "Send via Venmo", action: this.handleOpen });
-    sm_menu.push({ text: "Send via Paypal", action: this.handleOpen });
+    sm_menu.push({ text: "Send via Cash App", href: "https://cash.app" });
+    sm_menu.push({ text: "Send via Venmo", href: "https://venmo.com" });
+    sm_menu.push({ text: "Send via Paypal", href: "https://www.paypal.com" });
 
     const shareButton = ('share' in navigator) && status.get('visibility') === 'public' && (
       <IconButton className='status__action-bar-button' title={intl.formatMessage(messages.share)} icon='share-alt' onClick={this.handleShareClick} />
@@ -334,7 +334,7 @@ class StatusActionBar extends ImmutablePureComponent {
         <div className='status__action-bar__counter'><IconButton className='status__action-bar-button' title={replyTitle} icon={status.get('in_reply_to_account_id') === status.getIn(['account', 'id']) ? 'reply' : replyIcon} onClick={this.handleReplyClick} /><span className='status__action-bar__counter__label' >{obfuscatedCount(status.get('replies_count'))}</span></div>
         <IconButton className='status__action-bar-button' disabled={!publicStatus} active={status.get('reblogged')} pressed={status.get('reblogged')} title={!publicStatus ? intl.formatMessage(messages.cannot_reblog) : intl.formatMessage(messages.reblog)} icon={reblogIcon} onClick={this.handleReblogClick} />
         <IconButton className='status__action-bar-button star-icon' animate active={status.get('favourited')} pressed={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='star' onClick={this.handleFavouriteClick} />
-        {shareButton}
+        {/*{shareButton}*/}
 
         {/*<a class="button button-donate" href="https://cash.app/$johnkoht" target="_blank">Donate Money</a>*/}
 
